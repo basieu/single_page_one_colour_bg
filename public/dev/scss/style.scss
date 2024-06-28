@@ -1,0 +1,69 @@
+@import '../../../node_modules/bootstrap/';
+
+body {
+    background-color: #c2e0c2;
+    overflow: hidden;
+}
+
+.page-loader {
+    display: block;
+    position: absolute;
+    z-index: 10000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #c2e0c2;
+
+    .hello {
+        font-size: 15rem;
+        color: #198754;
+        animation: fadein 3s;
+    }
+}
+
+.text-lightgreen {
+    color: #c2e0c2;
+}
+
+#menu, #footermenu {
+    .nav-item {
+        margin: 0 0.5rem;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 1.5s ease;
+
+        &:hover {
+            border-bottom: 1px solid #c2e0c2;
+            transition: border-bottom 1.5s ease;
+        }
+
+        .nav-link.text-lightgreen:hover {
+            color: #c2e0c2;
+        }
+    }
+}
+
+.price-row:hover {
+    p {
+        text-shadow: 1px 1px #198754;
+    }
+}
+
+.carousel-control-prev {
+    justify-content: start;
+}
+
+.carousel-control-next {
+    justify-content: end;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        filter: brightness(0) saturate(100%) invert(38%) sepia(73%) saturate(428%) hue-rotate(100deg) brightness(94%) contrast(96%);
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
